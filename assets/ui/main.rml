@@ -1,0 +1,45 @@
+<rml>
+<head>
+    <title>Main Menu</title>
+
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+            background-color: #1a1a1a;
+            font-family: sans-serif;
+        }
+
+        #container {
+            width: 400px;
+            margin: auto;
+            margin-top: 200px;
+            text-align: center;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #333333;
+            color: white;
+            border: 1px solid #666666;
+        }
+
+        button:hover {
+            background-color: #555555;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h1>REMEMBER</h1>
+
+        <button onclick="console.log('Start')">Start Game</button>
+        <button onclick="console.log('Options')">Options</button>
+        <button onclick="console.log('Exit')">Exit</button>
+    </div>
+</body>
+</rml>

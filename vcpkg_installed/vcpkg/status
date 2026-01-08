@@ -1,0 +1,147 @@
+Package: vcpkg-cmake
+Version: 2024-04-23
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 0987362eba72489a2b0bc74848da14f1cb9088b3dfe978aacc7069ab267e96a6
+Status: install ok installed
+
+Package: zlib
+Version: 1.3.1
+Depends: vcpkg-cmake
+Architecture: x64-windows
+Multi-Arch: same
+Abi: c0846d1d5958f2dd618dbc3e65b11242055977851ae0eb0df63d96c3a58627d8
+Description: A compression library
+Status: install ok installed
+
+Package: vcpkg-cmake-config
+Version: 2024-05-23
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 80b139a16db9586821822493e1e2c117ce59f6a4def1a9780e1db8b1651a6af3
+Status: install ok installed
+
+Package: libpng
+Version: 1.6.53
+Depends: vcpkg-cmake, vcpkg-cmake-config, zlib
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 5c2b36ca62e3f54941746cd70c52b47ed0d33fa4b9f299b68299a1a9739b4f7d
+Description: libpng is a library implementing an interface for reading and writing PNG (Portable Network Graphics) format files
+Status: install ok installed
+
+Package: bzip2
+Version: 1.0.8
+Port-Version: 6
+Depends: vcpkg-cmake
+Architecture: x64-windows
+Multi-Arch: same
+Abi: a193a0a3157bc4b1d888c961ee75e2171bb8f06ae4a213f945e874a77053573d
+Description: bzip2 is a freely available, patent free, high-quality data compressor. It typically compresses files to within 10% to 15% of the best available techniques (the PPM family of statistical compressors), whilst being around twice as fast at compression and six times faster at decompression.
+Default-Features: tool
+Status: install ok installed
+
+Package: bzip2
+Feature: tool
+Architecture: x64-windows
+Multi-Arch: same
+Description: Builds bzip2 executable
+Status: install ok installed
+
+Package: brotli
+Version: 1.2.0
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: fa585c11b3b8feb5d635686bb90bfcd00f1cc0536f3a27567c473d44957c95b2
+Description: a generic-purpose lossless compression algorithm that compresses data using a combination of a modern variant of the LZ77 algorithm, Huffman coding and 2nd order context modeling.
+Status: install ok installed
+
+Package: freetype
+Version: 2.13.3
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 260afe767511ae940893d44ed3f0a8268de833becc795c69c505546bb9def52d
+Description: A library to render fonts.
+Default-Features: brotli, bzip2, png, zlib
+Status: install ok installed
+
+Package: freetype
+Feature: brotli
+Depends: brotli
+Architecture: x64-windows
+Multi-Arch: same
+Description: Support decompression of WOFF2 streams
+Status: install ok installed
+
+Package: freetype
+Feature: bzip2
+Depends: bzip2
+Architecture: x64-windows
+Multi-Arch: same
+Description: Support bzip2 compressed fonts.
+Status: install ok installed
+
+Package: freetype
+Feature: png
+Depends: libpng
+Architecture: x64-windows
+Multi-Arch: same
+Description: Support PNG compressed OpenType embedded bitmaps.
+Status: install ok installed
+
+Package: freetype
+Feature: zlib
+Depends: zlib
+Architecture: x64-windows
+Multi-Arch: same
+Description: Use zlib instead of internal library for DEFLATE
+Status: install ok installed
+
+Package: robin-hood-hashing
+Version: 3.11.5
+Port-Version: 2
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: b747a1830555c7aad6db936422b0044e6fca1fa879671af6b11622b3f07965da
+Description: Fast & memory efficient hashtable based on robin hood hashing for C++11/14/17/20
+Status: install ok installed
+
+Package: itlib
+Version: 1.12.0
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 148047535906968e34380d52ad667bc3d2119486ade44061ebf97fa141137748
+Description: A collection of std-like single-header C++ libraries.
+Status: install ok installed
+
+Package: rmlui
+Version: 6.1
+Depends: itlib, robin-hood-hashing, vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Maintainer: Michael R. P. Ragazzon <mikke89@users.noreply.github.com>
+Abi: 2d405d00d9b5e7f35e0fa8428e3af4feee06e1cbfa236a574143483a1957856d
+Description: RmlUi is the C++ user interface library based on the HTML and CSS standards, designed as a complete solution for any project's interface needs.
+Default-Features: freetype
+Status: install ok installed
+
+Package: rmlui
+Feature: freetype
+Depends: freetype
+Architecture: x64-windows
+Multi-Arch: same
+Description: Include font engine based on FreeType
+Status: install ok installed
+
+Package: sdl3
+Version: 3.4.0
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: ab4ab60cad004a9139c9f6523130a80b0812d6f26a90d732f0b397feee56bd25
+Description: Simple DirectMedia Layer is a cross-platform development library designed to provide low level access to audio, keyboard, mouse, joystick, and graphics hardware via OpenGL and Direct3D.
+Status: install ok installed
+

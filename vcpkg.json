@@ -1,0 +1,9 @@
+{
+  "name": "gamedev-rpgcoding",
+  "version-string": "0.1.0",
+  "dependencies": [
+    "sdl3",
+    "rmlui",
+    "sdl3-image"
+  ]
+}
